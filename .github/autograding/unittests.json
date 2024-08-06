@@ -1,0 +1,44 @@
+[
+  {
+    "name": "test_feedback_get",
+    "function": "test_feedback_get",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_feedback_post",
+    "function": "test_feedback_post",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_home",
+    "function": "test_home",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_info",
+    "function": "test_info",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_item",
+    "function": "test_item",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_post_data",
+    "function": "test_post_data",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_user",
+    "function": "test_user",
+    "timeout": 10,
+    "points": 1
+  }
+]

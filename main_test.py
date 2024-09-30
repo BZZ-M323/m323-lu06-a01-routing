@@ -1,6 +1,7 @@
 import unittest
 from main import app
 
+
 class FlaskAppTests(unittest.TestCase):
 
     def setUp(self):
@@ -10,7 +11,9 @@ class FlaskAppTests(unittest.TestCase):
     def test_home(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data.decode('utf-8'), 'Willkommen bei meiner Flask-App!')
+        self.assertEqual(
+            response.data.decode('utf-8'), 'Willkommen bei meiner Flask-App!'
+        )
 
     def test_info(self):
         response = self.client.get('/info')
@@ -30,7 +33,9 @@ class FlaskAppTests(unittest.TestCase):
     def test_feedback_get(self):
         response = self.client.get('/feedback')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data.decode('utf-8'), 'Bitte geben Sie Ihr Feedback ab.')
+        self.assertEqual(
+            response.data.decode('utf-8'), 'Bitte geben Sie Ihr Feedback ab.'
+        )
 
     def test_feedback_post(self):
         response = self.client.post('/feedback')

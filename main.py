@@ -1,3 +1,8 @@
+"""Einfaches Flask-Routing.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu06/aufgaben/routing
+"""
+
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -17,7 +22,8 @@ def info():
 
 @app.route('/user/<username>', methods=['GET'])
 def user(username):
-    """Gibt den Text 'Hallo, [username]!' zurück, wobei [username] durch den in der URL angegebenen Benutzernamen ersetzt wird."""
+    """Gibt den Text 'Hallo, [username]!' zurück, wobei [username] durch den in der URL angegebenen Benutzernamen
+    ersetzt wird."""
     return f'Hallo, {username}!'
 
 
@@ -29,7 +35,8 @@ def post_data():
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
-    """Bei einem GET-Request gibt es den Text 'Bitte geben Sie Ihr Feedback ab.' zurück. Bei einem POST-Request gibt es den Text 'Danke für Ihr Feedback!' zurück."""
+    """Bei einem GET-Request gibt es den Text 'Bitte geben Sie Ihr Feedback ab.' zurück. Bei einem POST-Request gibt es
+    den Text 'Danke für Ihr Feedback!' zurück."""
     if request.method == 'GET':
         return 'Bitte geben Sie Ihr Feedback ab.'
     elif request.method == 'POST':
@@ -38,7 +45,8 @@ def feedback():
 
 @app.route('/item/<int:item_id>', methods=['GET'])
 def item(item_id):
-    """Gibt den Text 'Artikel-ID: [item_id]' zurück, wobei [item_id] durch die in der URL angegebene Artikel-ID ersetzt wird."""
+    """Gibt den Text 'Artikel-ID: [item_id]' zurück, wobei [item_id] durch die in der URL angegebene Artikel-ID ersetzt
+    wird."""
     return f'Artikel-ID: {item_id}'
 
 

@@ -1,3 +1,8 @@
+"""Einfaches Flask-Routing.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu06/aufgaben/routing
+"""
+
 from flask import Flask, request
 
 
